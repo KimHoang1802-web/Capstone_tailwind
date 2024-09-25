@@ -3,9 +3,16 @@ Bước 2: Tạo reposity local trên máy tính
     2.1: git init:  khởi tạo repo local
 Bước 3: Kết nối 2 repo lại
     git remote add origin "url repo remote trên github"
-Bước 4: Đẩy file từ local lên remote
+Bước 4: Đẩy file từ local lên remote (3 bước cố định)
     4.1: Khai báo những file cần đẩy lên
         git add "ten file" Ví dụ muốn đẩy file html thì git add index.html
         git add . => đẩy tất cả file lên 
         git add -A(-all) => chỉ đẩy những file có thay đổi
- 
+        sau khi git add . xong thì phải git status
+    4.2: Xác nhận file cần thêm và lý do thêm file (phải có ý nghĩa, đúng mục đích)
+        git commit -m "lý do"
+        Ví dụ như: git commit -m "create html and note"
+    4.3: Đẩy file lên repo remote ( có 2 tên branchName mặc định là main và master)
+        git push -u origin "branchName" 
+        từ lần thứ 2 trở đi là git push
+        
